@@ -15,18 +15,6 @@
 
         <div id="navbar-menu">
             <ul class="nav navbar-nav">
-                <li>
-                    <a href="file-dashboard.html" class="icon-menu d-none d-sm-block d-md-none d-lg-block"><i class="fa fa-folder-open-o"></i></a>
-                </li>
-                <li>
-                    <a href="app-calendar.html" class="icon-menu d-none d-sm-block d-md-none d-lg-block"><i class="icon-calendar"></i></a>
-                </li>
-                <li>
-                    <a href="app-chat.html" class="icon-menu d-none d-sm-block"><i class="icon-bubbles"></i></a>
-                </li>
-                <li>
-                    <a href="app-inbox.html" class="icon-menu d-none d-sm-block"><i class="icon-envelope"></i><span class="notification-dot"></span></a>
-                </li>
                 <li class="dropdown">
                     <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
                         <i class="icon-bell"></i>
@@ -88,23 +76,6 @@
                         </li>
                         <li class="footer"><a href="javascript:void(0);" class="more">See all notifications</a></li>
                     </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown"><i class="icon-equalizer"></i></a>
-                    <ul class="dropdown-menu user-menu menu-icon">
-                        <li class="menu-heading">ACCOUNT SETTINGS</li>
-                        <li><a href="javascript:void(0);"><i class="icon-note"></i> <span>Basic</span></a></li>
-                        <li><a href="javascript:void(0);"><i class="icon-equalizer"></i> <span>Preferences</span></a></li>
-                        <li><a href="javascript:void(0);"><i class="icon-lock"></i> <span>Privacy</span></a></li>
-                        <li><a href="javascript:void(0);"><i class="icon-bell"></i> <span>Notifications</span></a></li>
-                        <li class="menu-heading">BILLING</li>
-                        <li><a href="javascript:void(0);"><i class="icon-credit-card"></i> <span>Payments</span></a></li>
-                        <li><a href="javascript:void(0);"><i class="icon-printer"></i> <span>Invoices</span></a></li>
-                        <li><a href="javascript:void(0);"><i class="icon-refresh"></i> <span>Renewals</span></a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="page-login.html" class="icon-menu"><i class="icon-login"></i></a>
                 </li>
             </ul>
         </div>

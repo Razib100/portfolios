@@ -38,13 +38,10 @@
     </div>
 </div>
 <!-- Overlay For Sidebars -->
-
 <div id="wrapper">
-
     <nav class="navbar navbar-fixed-top">
         @include('backend.layouts.headermenu')
     </nav>
-
     <div id="left-sidebar" class="sidebar">
         <div class="sidebar-scroll">
             <div class="user-account">
@@ -55,7 +52,6 @@
                     <ul class="dropdown-menu dropdown-menu-right account">
                         <li><a href="professors-profile.html"><i class="icon-user"></i>My Profile</a></li>
                         <li><a href="app-inbox.html"><i class="icon-envelope-open"></i>Messages</a></li>
-                        <li><a href="javascript:void(0);"><i class="icon-settings"></i>Settings</a></li>
                         <li class="divider"></li>
                         <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="icon-power"></i>Logout</a></li>
                         <form action="{{ route('logout') }}" method="POST" id="logout-form">
@@ -63,43 +59,14 @@
                         </form>
                     </ul>
                 </div>
-                <hr>
-                <ul class="row list-unstyled">
-                    <li class="col-4">
-                        <span>Exp</span>
-                        <h6>14</h6>
-                    </li>
-                    <li class="col-4">
-                        <span>Awards</span>
-                        <h6>13</h6>
-                    </li>
-                    <li class="col-4">
-                        <span>Clients</span>
-                        <h6>213</h6>
-                    </li>
-                </ul>
             </div>
-            <!-- Nav tabs -->
-            <ul class="nav nav-tabs">
-                <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#admin">Admin</a></li>
-                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#graduation"><i class="fa fa-graduation-cap"></i></a></li>
-                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#sub_menu"><i class="icon-grid"></i></a></li>
-                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#setting"><i class="icon-settings"></i></a></li>
-            </ul>
-
-            <!-- Tab panes -->
             @include('backend.layouts.sidebar')
         </div>
     </div>
-
     <div id="main-content">
         @yield('content')
     </div>
-
-
-
 </div>
-
 <!-- Javascript -->
 <script src="{{ asset('backend/assets/bundles/libscripts.bundle.js')}}"></script>
 <script src="{{ asset('backend/assets/bundles/vendorscripts.bundle.js')}}"></script>
@@ -107,8 +74,6 @@
 <script src="{{ asset('backend/assets/bundles/jvectormap.bundle.js')}}"></script> <!-- JVectorMap Plugin Js -->
 <script src="{{ asset('backend/assets/bundles/morrisscripts.bundle.js')}}"></script>
 <script src="{{ asset('backend/assets/bundles/knob.bundle.js')}}"></script>
-
-
 
 <script src="{{ asset('backend/assets/summernote/summernote.js')}}"></script>
 <script src="{{ asset('backend/assets/bundles/mainscripts.bundle.js')}}"></script>

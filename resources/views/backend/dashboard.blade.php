@@ -24,7 +24,6 @@
                 </div>
             </div>
         </div>
-
         <div class="row clearfix">
             <div class="col-lg-3 col-md-6">
                 <div class="card overflowhidden">
@@ -71,66 +70,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="row clearfix">
-            <div class="col-lg-8 col-md-12">
-                <div class="card">
-                    <div class="header">
-                        <h2>Annual Report <small>Description text here...</small></h2>
-                        <ul class="header-dropdown">
-                            <li class="dropdown">
-                                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a href="javascript:void(0);">Action</a></li>
-                                    <li><a href="javascript:void(0);">Another Action</a></li>
-                                    <li><a href="javascript:void(0);">Something else</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="body">
-                        <div class="row clearfix">
-                            <div class="col-lg-4 col-md-4 col-sm-4">
-                                <span class="text-muted">Sales Report</span>
-                                <h3 class="text-warning">$4,516</h3>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4">
-                                <span class="text-muted">Annual Revenue </span>
-                                <h3 class="text-info">$6,481</h3>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4">
-                                <span class="text-muted">Total Profit</span>
-                                <h3 class="text-success">$3,915</h3>
-                            </div>
-                        </div>
-                        <div id="area_chart" class="graph"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-12">
-                <div class="card">
-                    <div class="header">
-                        <h2>Income Analysis<small>8% High then last month</small></h2>
-                    </div>
-                    <div class="body">
-                        <div class="sparkline-pie text-center">6,4,8</div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="header">
-                        <h2>Sales Income</h2>
-                    </div>
-                    <div class="body">
-                        <h6>Overall <b class="text-success">7,000</b></h6>
-                        <div class="sparkline" data-type="line" data-spot-Radius="2" data-highlight-Spot-Color="#445771" data-highlight-Line-Color="#222"
-                             data-min-Spot-Color="#445771" data-max-Spot-Color="#445771" data-spot-Color="#445771"
-                             data-offset="90" data-width="100%" data-height="95px" data-line-Width="1" data-line-Color="#ffcd55"
-                             data-fill-Color="#ffcd55">2,4,3,1,5,7,3,2</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="row clearfix">
             <div class="col-sm-12 col-md-12 col-lg-12">
                 <div class="card">
@@ -214,95 +153,5 @@
                 </div>
             </div>
         </div>
-
-        <div class="row clearfix">
-            <div class="col-lg-4 col-md-12 col-sm-12">
-                <div class="card">
-                    <div class="header">
-                        <h2>New Orders</h2>
-                    </div>
-                    <div class="body">
-                        <table class="table table-hover">
-                            <thead class="thead-success">
-                            <tr>
-                                <th>#</th>
-                                <th>Product</th>
-                                <th>Customers</th>
-                                <th>Total</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>01</td>
-                                <td>IPONE-7</td>
-                                <td>
-                                    <ul class="list-unstyled team-info margin-0">
-                                        <li><img src="../assets/images/xs/avatar1.jpg" title="Avatar" alt="Avatar"></li>
-                                        <li><img src="../assets/images/xs/avatar6.jpg" title="Avatar" alt="Avatar"></li>
-                                    </ul>
-                                </td>
-                                <td>$ 356</td>
-                            </tr>
-                            <tr>
-                                <td>02</td>
-                                <td>NOKIA-8</td>
-                                <td>
-                                    <ul class="list-unstyled team-info margin-0">
-                                        <li><img src="../assets/images/xs/avatar1.jpg" title="Avatar" alt="Avatar"></li>
-                                        <li><img src="../assets/images/xs/avatar5.jpg" title="Avatar" alt="Avatar"></li>
-                                        <li><img src="../assets/images/xs/avatar9.jpg" title="Avatar" alt="Avatar"></li>
-                                    </ul>
-                                </td>
-                                <td>$ 542</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>IPONE-7</td>
-                                <td>
-                                    <ul class="list-unstyled team-info margin-0">
-                                        <li><img src="../assets/images/xs/avatar5.jpg" title="Avatar" alt="Avatar"></li>
-                                    </ul>
-                                </td>
-                                <td>$ 356</td>
-                            </tr>
-                            <tr>
-                                <td>02</td>
-                                <td>NOKIA-8</td>
-                                <td>
-                                    <ul class="list-unstyled team-info margin-0">
-                                        <li><img src="../assets/images/xs/avatar3.jpg" title="Avatar" alt="Avatar"></li>
-                                        <li><img src="../assets/images/xs/avatar2.jpg" title="Avatar" alt="Avatar"></li>
-                                    </ul>
-                                </td>
-                                <td>$ 542</td>
-                            </tr>
-
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-8 col-md-12 col-sm-12">
-                <div class="card">
-                    <div class="header">
-                        <h2>Top Selling Country</h2>
-                        <ul class="header-dropdown">
-                            <li class="dropdown">
-                                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a href="javascript:void(0);">Action</a></li>
-                                    <li><a href="javascript:void(0);">Another Action</a></li>
-                                    <li><a href="javascript:void(0);">Something else</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="body">
-                        <div id="world-map-markers" class="jvector-map" style="height: 300px"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
 @endsection

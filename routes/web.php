@@ -20,4 +20,8 @@ Route::get('/', function () {
 
 Route::middleware(['auth:sanctum', 'verified', 'authAdmin'])->group(function(){
     Route::get('/admin/dashboard' , [AdminController::class, 'index'])->name('admin');
+//    Contact creation
+    Route::resource('/contact',\App\Http\Controllers\ContactController::class);
+    //    Bank creation
+    Route::resource('/bank',\App\Http\Controllers\BankController::class);
 });
