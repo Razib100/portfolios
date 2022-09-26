@@ -13,6 +13,11 @@
                         <li><a href="{{ route('bank.index') }}">All Banks</a></li>
                     </ul>
                 </li>
+                <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Document Management</span> </a>
+                    <ul>
+                        <li><a href="{{ route('document.index') }}">All Documents</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </div>
