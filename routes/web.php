@@ -20,8 +20,13 @@ Route::get('/', function () {
 
 Route::middleware(['auth:sanctum', 'verified', 'authAdmin'])->group(function(){
     Route::get('/admin/dashboard' , [AdminController::class, 'index'])->name('admin');
-//    Contact creation
+    //    Contact creation
     Route::resource('/contact',\App\Http\Controllers\ContactController::class);
     //    Bank creation
     Route::resource('/bank',\App\Http\Controllers\BankController::class);
+    //    Document creation
+    Route::resource('/document',\App\Http\Controllers\DocumentController::class);
+    //    Footer creation
+    Route::resource('/footer',\App\Http\Controllers\FooterController::class);
+    Route::post('footer/status', [\App\Http\Controllers\FooterController::class,'footerStatus'])->name('footer.status');
 });
