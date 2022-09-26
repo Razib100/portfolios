@@ -47,7 +47,17 @@
                                         <td>{{$item->acc_no}}</td>
                                         <td><img src="{{$item->photo}}" alt="contact-image" style="max-height: 90px; max-width: 120px;"></td>
                                         <td>{{$item->card_no}}</td>
-                                        <td>{{$item->uses}}</td>
+                                        <td>
+                                            @if($item->uses == 'salary')
+                                                <span class="badge badge-success">{{$item->uses}}</span>
+                                            @elseif($item->uses == 'saving')
+                                                <span class="badge badge-primary">{{$item->uses}}</span>
+                                            @elseif($item->uses == 'visa card')
+                                                <span class="badge badge-danger">{{$item->uses}}</span>
+                                            @else
+                                                <span class="badge badge-warning">{{$item->uses}}</span>
+                                            @endif
+                                        </td>
                                         <td>
                                             <a href="javascript:void(0);" data-toggle="modal" data-target="#contactID{{$item->id}}" title="View" class="float-left btn btn-sm btn-outline-success" data-placement="bottom"><i class="fas fa-eye"></i></a>
                                             <a href="{{ route('bank.edit' , $item->id ) }}" data-toggle="tooltip" title="Edit" class="ml-2 float-left btn btn-sm btn-outline-warning" data-placement="bottom"><i class="fas fa-edit"></i></a>
@@ -104,7 +114,17 @@
                                                         <div class="row">
                                                             <div class="col-md-6">
                                                                 <strong>Uses:</strong>
-                                                                <p>{{ $item->uses }}</p>
+                                                                <p>
+                                                                    @if($item->uses == 'salary')
+                                                                        <span class="badge badge-success">{{$item->uses}}</span>
+                                                                    @elseif($item->uses == 'saving')
+                                                                        <span class="badge badge-primary">{{$item->uses}}</span>
+                                                                    @elseif($item->uses == 'visa card')
+                                                                        <span class="badge badge-danger">{{$item->uses}}</span>
+                                                                    @else
+                                                                        <span class="badge badge-warning">{{$item->uses}}</span>
+                                                                    @endif
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>
