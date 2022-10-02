@@ -601,7 +601,7 @@
 
             <div class="section-title">
                 <h2>Contact</h2>
-                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                <p>{!! html_entity_decode($footer_info->summary) !!}</p>
             </div>
 
             <div class="row">
@@ -609,7 +609,7 @@
                 <div class="col-lg-4 col-md-4">
                     <div class="contact-about">
                         <h3>Hasan</h3>
-                        <p>Cras fermentum odio eu feugiat. Justo eget magna fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
+                        <p>{!! html_entity_decode($footer_info->description) !!}</p>
                         <div class="social-links">
                             <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
                             <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
@@ -624,17 +624,17 @@
                     <div class="info">
                         <div class="d-flex align-items-center">
                             <i class="bi bi-geo-alt"></i>
-                            <p>Dhaka -1212<br>Bangladesh</p>
+                            <p>{{ $footer_info->address }}</p>
                         </div>
 
                         <div class="d-flex align-items-center mt-4">
                             <i class="bi bi-envelope"></i>
-                            <p>razibhasan634@gmail.com</p>
+                            <p>{{ $footer_info->email }}</p>
                         </div>
 
                         <div class="d-flex align-items-center mt-4">
                             <i class="bi bi-phone"></i>
-                            <p>+8801618-195557</p>
+                            <p>+88{{ $footer_info->phone }}</p>
                         </div>
 
                     </div>

@@ -66,12 +66,6 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6">
                                     <div class="form-group">
-                                        <label for="">Social Media Icon:</label>
-                                        <input type="text" class="form-control" placeholder="fa fa-pencil" name="social_media_image" value="{{ old('social_media_image')}}">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="form-group">
                                         <label for="">Social Media Link:</label>
                                         <input type="text" class="form-control" placeholder="Link" name="social_media_link" value="{{ old('social_media_link')}}">
                                     </div>
@@ -83,6 +77,23 @@
                                         <option value="active" {{ old('status' == 'active' ? 'selected' : '')}}>Active</option>
                                         <option value="inactive" {{ old('status' == 'inactive' ? 'selected' : '')}}>Inactive</option>
                                     </select>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-12">
+                                            <div class="form-group">
+                                                <label for="">Social Media Icon:</label>
+                                                <input type="text" class="form-control" placeholder="fa fa-pencil" name="social_media_image" value="{{ old('social_media_image')}}">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8 col-md-8 col-sm-12">
+                                            <div class="form-group">
+                                                <label for="">Social Media Link:</label>
+                                                <input type="text" class="form-control" placeholder="Link" name="social_media_link" value="{{ old('social_media_link')}}">
+                                            </div>
+                                        </div>
+                                        <a id="add_more_btn1" class="btn btn-block grayBtn"><i class="fas fa-plus"></i></a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-sm-12">

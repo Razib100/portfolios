@@ -39,7 +39,6 @@ class FooterController extends Controller
         $this->validate($request,[
            'summary' => 'string|required',
            'description' => 'string|required',
-           'summary' => 'string|required',
            'address' => 'string|required',
            'email' => 'string|required',
            'phone' => 'string|required',
@@ -51,7 +50,7 @@ class FooterController extends Controller
         $data = $request->all();
         $status = footerInfo::create($data);
         if($status){
-            return reredirect()->route('footer.index')->with('success','Footer Informtion Create Successfully');
+            return redirect()->route('footer.index')->with('success','Footer Information Create Successfully');
         }
         else{
             return back()->with('error', 'Something went wrong');
@@ -77,7 +76,13 @@ class FooterController extends Controller
      */
     public function edit($id)
     {
-        //
+        $info = footerInfo::find($id);
+        if($info){
+            return view('backend.footer.edit', compact('info'));
+        }
+        else{
+            return back()->with('error', 'Data not found!');
+        }
     }
 
     /**
@@ -89,7 +94,30 @@ class FooterController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $info = footerInfo::find($id);
+        if($info){
+            $this->validate($request,[
+                'summary' => 'string|required',
+                'description' => 'string|required',
+                'address' => 'string|required',
+                'email' => 'string|required',
+                'phone' => 'string|required',
+                'social_media_link' => 'string|required',
+                'social_media_image' => 'string|required',
+
+            ]);
+            $data       = $request->all();
+            $status       = $info->fill($data)->save();
+        if($status){
+            return redirect()->route('footer.index')->with('success', 'Footer Information update successfully');
+        }
+        else{
+            return back()->with('error', 'Something went wrong');
+        }
+        }
+        else{
+            return back()->with('error', 'Data not found!');
+        }
     }
 
     /**
@@ -100,14 +128,26 @@ class FooterController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $info = footerInfo::find($id);
+        if($info){
+            $status = $info->delete($id);
+            if($status){
+                return redirect()->route('footer.index')->with('success', 'Footer Information delete successfully');
+            }
+            else {
+                return back()->with('error', 'Something went wrong!');
+            }
+        }
+        else{
+            return back()->with('error', 'Data not found!');
+        }
     }
 
     public function footerStatus(Request $request){
         if($request->mode == 'true'){
-            DB::table('footer_infos')->where('id', $request->id)->update(['status' => 'active']);
+            footerInfo::where('id', $request->id)->update(['status' => 'active']);
         } else{
-            DB::table('footer_infos')->where('id', $request->id)->update(['status' => 'inactive']);
+            footerInfo::where('id', $request->id)->update(['status' => 'inactive']);
         }
         return response()->json(['msg' => 'Successfully updated status', 'status' => true]);
     }

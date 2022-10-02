@@ -48,7 +48,7 @@
                                         <td>{{$item->phone}}</td>
                                         <td><i class="{{ $item->social_media_image }}"></i></td>
                                         <td>
-                                            <input type="checkbox" name="toogle" value="{{ $item->id }}" {{$item->status=='active' ? 'checked' : ''}} data-toggle="toggle" data-on="Active" data-off="Inactive" data-size="sm" data-onstyle="success" data-offstyle="danger">
+                                            <input type="checkbox" name="toogle" value="{{ $item->id }}" {{ $item->status=='active' ? 'checked' : '' }} data-toggle="toggle" data-on="Active" data-off="Inactive" data-size="sm" data-onstyle="success" data-offstyle="danger">
                                         </td>
                                         <td>
                                             <a href="javascript:void(0);" data-toggle="modal" data-target="#documentID{{$item->id}}" title="View" class="float-left btn btn-sm btn-outline-success" data-placement="bottom"><i class="fas fa-eye"></i></a>
@@ -62,7 +62,52 @@
                                         <!-- Modal -->
                                         <div class="modal fade" id="documentID{{$item->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                             <div class="modal-dialog modal-dialog-centered" role="document">
-
+                                                @php
+                                                    $item = \App\Models\footerInfo::where('id', $item->id)->first();
+                                                @endphp
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLongTitle">{{ \Illuminate\Support\Str::upper( $item->title )  }}</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <strong>Summary:</strong>
+                                                        <p>{!! html_entity_decode($item->summary) !!}</p>
+                                                        <strong>Descritpion:</strong>
+                                                        <p>{!! html_entity_decode($item->description) !!}</p>
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <strong>Address:</strong>
+                                                                <p>{{ $item->address }}</p>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <strong>Phone:</strong>
+                                                                <p>{{ $item->phone }}</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <strong>Email:</strong>
+                                                                <p>{{ $item->email }}</p>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <strong>Social Media Icon:</strong>
+                                                                <p>{{ $item->social_media_image }}</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <strong>Social Media Link:</strong>
+                                                                <p>{{ $item->social_media_link }}</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </tr>
