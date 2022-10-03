@@ -28,4 +28,7 @@ Route::middleware(['auth:sanctum', 'verified', 'authAdmin'])->group(function(){
     //    Footer creation
     Route::resource('/footer',\App\Http\Controllers\FooterController::class);
     Route::post('footer/status', [\App\Http\Controllers\FooterController::class,'footerStatus'])->name('footer.status');
+    //    Testimonial creation
+    Route::resource('/testimonial',\App\Http\Controllers\TestimonialController::class);
+    Route::post('testimonial/status', [\App\Http\Controllers\TestimonialController::class,'testimonialStatus'])->name('testimonial.status');
 });

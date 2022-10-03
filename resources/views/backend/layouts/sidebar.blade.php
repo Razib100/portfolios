@@ -23,6 +23,11 @@
                         <li><a href="{{ route('footer.index') }}">All Footers</a></li>
                     </ul>
                 </li>
+                <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Testimonial Management</span> </a>
+                    <ul>
+                        <li><a href="{{ route('testimonial.index') }}">All Testimonials</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </div>
