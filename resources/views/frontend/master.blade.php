@@ -516,78 +516,28 @@
         <div class="container">
 
             <div class="section-title">
-                <h2>Testimonials</h2>
+                <h2>Testimonialsssss</h2>
                 <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
             </div>
 
             <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                 <div class="swiper-wrapper">
+                    @foreach($testimonial_infos as $item)
+
 
                     <div class="swiper-slide">
                         <div class="testimonial-item">
                             <p>
                                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                                {{ $item->feedback }}
                                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                             </p>
-                            <img src="{{ asset('frontend') }}/assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                            <h3>Saul Goodman</h3>
-                            <h4>Ceo &amp; Founder</h4>
+                            <img src="{{ $item->photo }}" class="testimonial-img" alt="{{ $item->name }}" style="height: 90px; width: 90px;">
+                            <h3>{{ $item->name }}</h3>
+                            <h4>{{ $item->designation }}</h4>
                         </div>
                     </div><!-- End testimonial item -->
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <p>
-                                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                            </p>
-                            <img src="{{ asset('frontend') }}/assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                            <h3>Sara Wilsson</h3>
-                            <h4>Designer</h4>
-                        </div>
-                    </div><!-- End testimonial item -->
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <p>
-                                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                            </p>
-                            <img src="{{ asset('frontend') }}/assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                            <h3>Jena Karlis</h3>
-                            <h4>Store Owner</h4>
-                        </div>
-                    </div><!-- End testimonial item -->
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <p>
-                                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                            </p>
-                            <img src="{{ asset('frontend') }}/assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                            <h3>Matt Brandon</h3>
-                            <h4>Freelancer</h4>
-                        </div>
-                    </div><!-- End testimonial item -->
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <p>
-                                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                            </p>
-                            <img src="{{ asset('frontend') }}/assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                            <h3>John Larson</h3>
-                            <h4>Entrepreneur</h4>
-                        </div>
-                    </div><!-- End testimonial item -->
-
+                    @endforeach
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
@@ -601,7 +551,7 @@
 
             <div class="section-title">
                 <h2>Contact</h2>
-                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                <p>{!! html_entity_decode($footer_info->summary) !!}</p>
             </div>
 
             <div class="row">
@@ -609,7 +559,7 @@
                 <div class="col-lg-4 col-md-4">
                     <div class="contact-about">
                         <h3>Hasan</h3>
-                        <p>Cras fermentum odio eu feugiat. Justo eget magna fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
+                        <p>{!! html_entity_decode($footer_info->description) !!}</p>
                         <div class="social-links">
                             <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
                             <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
@@ -624,17 +574,17 @@
                     <div class="info">
                         <div class="d-flex align-items-center">
                             <i class="bi bi-geo-alt"></i>
-                            <p>Dhaka -1212<br>Bangladesh</p>
+                            <p>{{ $footer_info->address }}</p>
                         </div>
 
                         <div class="d-flex align-items-center mt-4">
                             <i class="bi bi-envelope"></i>
-                            <p>razibhasan634@gmail.com</p>
+                            <p>{{ $footer_info->email }}</p>
                         </div>
 
                         <div class="d-flex align-items-center mt-4">
                             <i class="bi bi-phone"></i>
-                            <p>+8801618-195557</p>
+                            <p>+88{{ $footer_info->phone }}</p>
                         </div>
 
                     </div>
