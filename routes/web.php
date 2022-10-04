@@ -1,5 +1,6 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\frontend\IndexController;
@@ -32,3 +33,10 @@ Route::middleware(['auth:sanctum', 'verified', 'authAdmin'])->group(function(){
     Route::resource('/testimonial',\App\Http\Controllers\TestimonialController::class);
     Route::post('testimonial/status', [\App\Http\Controllers\TestimonialController::class,'testimonialStatus'])->name('testimonial.status');
 });
+//Route::get('/subscribe', function (){
+//    Mail::to('razibhasan936@gmail.com')
+//        ->send(new \App\Mail\HelloMail());
+//});
+
+Route::post('/subscribe',[IndexController::class, 'subscribe'])->name('email.post');
+Route::post('/getDownload',[IndexController::class, 'getDownload'])->name('resume.download');

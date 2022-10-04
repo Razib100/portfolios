@@ -304,7 +304,7 @@
                         </ul>
                         </p>
                     </div>
-                    <div class="text-center download"><button type="submit">Download Resume</button></div>
+                    <div class="text-center download"><button type="submit" id="resumeDownload">Download Resume</button></div>
                 </div>
             </div>
 
@@ -589,9 +589,24 @@
 
                     </div>
                 </div>
-
+                @if(session('success'))
+                    <div class="alert alert-success alert-dismissible fade show" id="alert" role="alert">
+                        {{session('success')}}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                @elseif(session('error'))
+                    <div class="alert alert-danger alert-dismissible fade show" id="'alert" role="alert">
+                        {{session('error')}}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                @endif
                 <div class="col-lg-5 col-md-8">
-                    <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                    <form action="{{ route('email.post') }}" method="post" role="form">
+                        @csrf
                         <div class="form-group">
                             <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
                         </div>
@@ -603,11 +618,6 @@
                         </div>
                         <div class="form-group mt-3">
                             <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-                        </div>
-                        <div class="my-3">
-                            <div class="loading">Loading</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Your message has been sent. Thank you!</div>
                         </div>
                         <div class="text-center"><button type="submit">Send Message</button></div>
                     </form>
@@ -637,7 +647,7 @@
 </footer><!-- End  Footer -->
 
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <!-- Vendor JS Files -->
 <script src="{{ asset('frontend') }}/assets/vendor/purecounter/purecounter_vanilla.js"></script>
 <script src="{{ asset('frontend') }}/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -649,6 +659,26 @@
 
 <!-- Template Main JS File -->
 <script src="{{ asset('frontend') }}/assets/js/main.js"></script>
+<script>
+    $('#resumeDownload').click(function (){
+        var url = "{{ route('resume.download') }}";
+            $.ajax({
+                url:url,
+                type:"POST",
+                data: {
+                    "_token": "{{ csrf_token() }}",
+                },
+                success:function(response){
+                    if(response){
+                        console.log('success');
+                    }
+                    else{
+                        console.log('error');
+                    }
+                }
+            })
+    })
+</script>
 
 </body>
 
